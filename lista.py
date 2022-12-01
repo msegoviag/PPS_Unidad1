@@ -1,4 +1,3 @@
-
 # Se comprueba si el número está en la lista.
 def estaEnLista(num, lista):
 
@@ -20,10 +19,10 @@ def estaEnRango(valor, minimo, maximo):
 
 # Ejecución segura ante fallos, solo se permitirá numeros no letras.
 
-
+lista = [6, 14, 11, 3, 2, 1, 15, 19]
 try:
-    lista = [6, 14, 11, 3, 2, 1, 15, 19]
-    estaEnRango(5, 5, 10)
-    estaEnLista(-1, lista)
+    numeroUsuario = int(input("Introduce el número a comprobar: "))
+    estaEnRango(numeroUsuario, 5, 10)
+    estaEnLista(numeroUsuario, lista)
 except (ValueError, TypeError):
-    print("Introduce únicamente números")
+    print("Introduce únicamente números.")
